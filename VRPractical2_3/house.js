@@ -19,3 +19,4 @@ class house{
     scene.append( this.obj )
   
 }
+}
