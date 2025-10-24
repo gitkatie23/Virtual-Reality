@@ -1,6 +1,16 @@
  class cloud{
-  constructor(x,y,z){
+  constructor(x,y,z,speed){
+    this.x = x;
+    this.y = y;
+    this.z = z;
+    this.speed = speed;
     this.obj = document.createElement("a-entity");
+  
+    let position = 0;
+    for(let i = 0; i < 3; i++){
+      let puff = document.createElement("a-dodecahedron");
+      puff.setAttribute("position")
+    }
   
     let circle = document.createElement("a-sphere");
     circle.setAttribute("color","white");

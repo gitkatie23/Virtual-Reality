@@ -4,6 +4,9 @@ let scene;
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene"); //CSS Selector
 
+   createtree();
+
+
   for(let i = 0; i < 100; i++){
     let x = rnd(-20,20);
     let z = rnd(-20,20);
