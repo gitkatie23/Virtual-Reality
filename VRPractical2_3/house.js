@@ -2,11 +2,11 @@ class house{
   constructor(x,y,z){
     this.obj = document.createElement("a-entity");
   
-    let wall = document.createElement("a-box");
-    wall.setAttribute("color","white");
-    wall.setAttribute("position","0 1.5 0");
-    wall.setAttribute("height","2");
-    this.obj.append( wall );
+    let room = document.createElement("a-box");
+    room.setAttribute("color","white");
+    room.setAttribute("position","0 1.5 0");
+    room.setAttribute("height","2");
+    this.obj.append( room );
 
     let wall = document.createElement("a-box");
     wall.setAttribute("color","white");
