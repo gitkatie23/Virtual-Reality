@@ -2,11 +2,6 @@ class rocket{
   constructor(x,y,z){
     this.obj = document.createElement("a-entity");
   
-    let box = document.createElement("a-box");
-    box.setAttribute("color","red");
-    box.setAttribute("position","0 0 0");
-    box.setAttribute("height","2");
-    this.obj.append( box );
   
     let tube = document.createElement("a-cylinder");
     tube.setAttribute("position","0 0 0");
