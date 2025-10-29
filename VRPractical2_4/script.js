@@ -7,6 +7,13 @@ window.addEventListener("DOMContentLoaded",function() {
   for(let i = 0; i < 20; i++){
     let x = rnd(-20,20);
     let z = rnd(-20,20);
-    let rocket = new rocket(x, 0 , z);
+    let tree = new Tree(x, 0 , z);
   }
+  snowman = new Snowman(-5,0);
+  loop();
+})
+
+function loop(){
+  snowman.spin();
+  window.requestAnimationFrame( loop );
 }
