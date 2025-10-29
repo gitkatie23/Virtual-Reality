@@ -1,25 +1,25 @@
 class rocket{
-  constructor(x,z){
-    this.a = 0;
-    this.da = 1;
-    
+  constructor(x,y,z){
     this.obj = document.createElement("a-entity")
-    for(let i = 0; i < 3; i++){
-      let body = document.createElement("a-cylinder");
-      body.setAttribute("position",{x:0,y:0.5 + 1.5 * i,z:0});
-      body.setAttribute("radius",1.25 - 0.20 * i);
-      this.obj.append(body)
-    }
-    for(let i = 0; i < 2; i++){
-      let top = document.createElement("a-cylinder);
-      top.setAttribute("position",{x:-0.25 + 0.50 * i,y:3.5,z:0.85});
-      top.setAttribute("height",2);
-      top.setAttribute("color","yellow")
-      this.obj.append(top)
-    }
-    
-    this.obj.setAttribute("position",{x:x,y:0,z:z});
-    scene.append(this.obj);
-  }
 
+ 
+      let top = document.createElement("a-cone);
+      top.setAttribute("color","yellow")
+      top.setAttribute("position","0 1.5 0");
+      top.setAttribute("height","2");  
+      this.obj.append( top )
+    
+    let body = document.createElement("a-cylinder");
+    body.setAttribute("position","0 0 0");
+    body.setAttribute("color","red");
+    body.setAttribute("radius","0.25");
+    this.obj.append( body )
+    
+    this.obj.setAttribute("position",{x:x, y:y, z:z});
+    scene.append( this.obj )
   }
+ scale(size){
+    this.obj.setAttribute("scale",{x:size,y:size,z:size});
+  }
+}
+  
