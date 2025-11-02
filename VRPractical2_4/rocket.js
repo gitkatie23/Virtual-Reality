@@ -3,12 +3,12 @@ class rocket{
     this.obj = document.createElement("a-entity")
 
  
-      let top = document.createElement("a-cone);
-      top.setAttribute("color","yellow")
-      top.setAttribute("position","0 1.5 0");
-      top.setAttribute("height","2");  
-      this.obj.append( top )
-    
+      let cone = document.createElement("a-cone");
+      cone.setAttribute("color","yellow")
+      cone.setAttribute("position","0 1.5 0");
+      cone.setAttribute("height","2");  
+         this.obj.append( cone )
+      
     let body = document.createElement("a-cylinder");
     body.setAttribute("position","0 0 0");
     body.setAttribute("color","red");
