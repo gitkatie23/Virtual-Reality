@@ -1,5 +1,5 @@
 let rnd = (l,u) => Math.floor(Math.random()*(u-l) + l);
-let scene, snowman;
+let scene, UFO;
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene"); //CSS Selector
@@ -7,13 +7,14 @@ window.addEventListener("DOMContentLoaded",function() {
   for(let i = 0; i < 20; i++){
     let x = rnd(-20,20);
     let z = rnd(-20,20);
-    let tree = new Tree(x, 0 , z);
+    let rocket = new rocket(x, 0 , z);
   }
-  snowman = new Snowman(-5,0);
+    UFO = new UFO(-5,0);
   loop();
+
 })
 
 function loop(){
-  snowman.spin();
+  UFO.spin();
   window.requestAnimationFrame( loop );
 }
