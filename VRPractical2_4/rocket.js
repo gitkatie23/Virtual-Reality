@@ -17,13 +17,7 @@ class rocket {
 
     this.obj.setAttribute("position", { x: x, y: y, z: z });
 
-    // FIX: Get the scene element and append the rocket object to it
-    const scene = document.querySelector('a-scene'); 
-    if (scene) {
-      scene.append(this.obj);
-    } else {
-      console.error("A-Frame scene not found!");
-    }
+   
   }
   scale(size) {
     this.obj.setAttribute("scale", { x: size, y: size, z: size });
