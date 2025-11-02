@@ -1,6 +1,4 @@
 // Get a reference to the actual <a-scene> element in the HTML
-const scene = document.querySelector('a-scene');
-
 class rocket {
   constructor(x, y, z) {
     this.obj = document.createElement("a-entity");
@@ -17,23 +15,17 @@ class rocket {
     body.setAttribute("radius", "0.25");
     this.obj.append(body);
 
-    this.obj.setAttribute("position", {
-      x: x,
-      y: y,
-      z: z
-    });
-    // This will now work because 'scene' is defined
-    scene.append(this.obj);
+    this.obj.setAttribute("position", { x: x, y: y, z: z });
+
+    // FIX: Get the scene element and append the rocket object to it
+    const scene = document.querySelector('a-scene'); 
+    if (scene) {
+      scene.append(this.obj);
+    } else {
+      console.error("A-Frame scene not found!");
+    }
   }
   scale(size) {
-    this.obj.setAttribute("scale", {
-      x: size,
-      y: size,
-      z: size
-    });
+    this.obj.setAttribute("scale", { x: size, y: size, z: size });
   }
 }
-
-// Example of how to use it (make sure you have A-Frame in your HTML):
-// let myRocket = new rocket(0, 0, -5); 
-// myRocket.scale(0.5); 
