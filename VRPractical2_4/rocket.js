@@ -10,7 +10,7 @@ class rocket {
     this.obj.append(cone);
 
     let body = document.createElement("a-cylinder");
-    body.setAttribute("position", "0 0 0");
+    body.setAttribute("position", "0 1 0");
     body.setAttribute("color", "red");
     body.setAttribute("radius", "0.25");
     this.obj.append(body);
