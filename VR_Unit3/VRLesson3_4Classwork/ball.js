@@ -2,7 +2,7 @@ class Ball{
   constructor(x,y,z){
     this.x = x;
     this.y = y;
-    this.z = z;
+    this.z = z; 
     this.dx = rnd(1,3) / 250;
     this.dy = rnd(1,3) / 250;
     this.dz = rnd(1,3) / 250;
