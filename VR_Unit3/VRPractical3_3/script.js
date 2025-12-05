@@ -23,7 +23,6 @@ function loop(){
   if(bullet){
     bullet.fire(); 
 
-  enemy.update();
   
 }
   }

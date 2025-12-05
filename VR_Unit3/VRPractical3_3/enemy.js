@@ -10,7 +10,7 @@ class enemy{
     this.obj = document.createElement("a-cone");
     this.obj.setAttribute("height",3);
     this.obj.setAttribute("radius-bottom",0.25);
-    this.obj.setAttribute("color", black);
+    this.obj.setAttribute("color","green");
     this.obj.setAttribute("position",{x:this.x, y:this.y, z: this.z})
     scene.append(this.obj);
   }
