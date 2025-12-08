@@ -4,8 +4,7 @@ let scene, camera, bullet, enemies = [], ammo_boxes = [], ammo_count = 3, enemy_
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
   camera = document.querySelector("a-camera");
-   enemy = new Enemy(0,0,-3);
-    loop(); 
+  
   window.addEventListener("keydown",function(e){
     //User can only fire with they press the spacebar and have sufficient ammo
     if(e.key == " " && ammo_count > 0  ){
