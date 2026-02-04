@@ -8,8 +8,7 @@ window.addEventListener("DOMContentLoaded",function() {
     let x = rnd(-20,20);
     let z = rnd(-20,20);
     let person = document.createElement("a-gltf-model");
-    person.setAttribute("src","#animalmodel");
-    person.setAttribute("src","webmodel");
+     person.setAttribute("src","#animal");
     person.setAttribute("animation-mixer","");
     person.setAttribute("position",{x:x,y:0,z:z});
     person.addEventListener("click",function(){
