@@ -23,8 +23,8 @@
 //})
 
 //function loop(){
-  //for(let person of people){
-  //  person.object3D.position.z += 0.005;
+ // for(let person of people){
+    //person.object3D.position.z += 0.005;
   //}
   
- // window.requestAnimationFrame(loop);
+  //window.requestAnimationFrame(loop);
