@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a-scene {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* A-Frame entity styling */
+a-asset-item {
+  display: none;
+}
+
+/* Cursor styling */
+a-cursor {
+  opacity: 1;
+}
+
+/* Make the scene responsive */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}

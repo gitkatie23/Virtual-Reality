@@ -1,0 +1,11 @@
+Model Information:
+* title:	Donkey_avatar
+* source:	https://sketchfab.com/3d-models/donkey-avatar-3cc3125c7e294ac4be8977db20c5bfa0
+* author:	AmieChairez (https://sketchfab.com/AmiesChairezJR)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Donkey_avatar" (https://sketchfab.com/3d-models/donkey-avatar-3cc3125c7e294ac4be8977db20c5bfa0) by AmieChairez (https://sketchfab.com/AmiesChairezJR) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
