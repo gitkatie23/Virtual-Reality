@@ -7,23 +7,23 @@ window.addEventListener("DOMContentLoaded",function() {
   for(let i = 0; i < 40; i++){
     let x = rnd(-20,20);
     let z = rnd(-20,20);
-    let person = document.createElement("a-gltf-model");
-    person.setAttribute("src","#animal");
-    person.setAttribute("animation-mixer","");
-    person.setAttribute("position",{x:x,y:0,z:z});
-    person.addEventListener("click",function(){
+    let animal = document.createElement("a-gltf-model");
+    animal.setAttribute("src","#donkey");
+    animal.setAttribute("animation-mixer","");
+    animal.setAttribute("position", {x:-1,y:3,z:-5});
+    animal.addEventListener("click",function(){
       this.setAttribute("scale","0 0 0");
     })
-    people.push(person);
-    scene.append(person);
+    people.push(animal);
+    scene.append(animal);
   }
   
   loop();
 })
 
 function loop(){
-  for(let person of people){
-    person.object3D.position.z += 0.005;
+  for(let animal of people){
+    animal.object3D.position.z += 0.005;
   }
   
   window.requestAnimationFrame(loop);
