@@ -10,7 +10,8 @@ window.addEventListener("DOMContentLoaded",function() {
     let animal = document.createElement("a-gltf-model");
     animal.setAttribute("src","#donkey");
     animal.setAttribute("animation-mixer","");
-    animal.setAttribute("position", {x:-1,y:3,z:-5});
+    animal.setAttribute("position", x + " 0 " + z);
+    animal.setAttribute("scale", "0.5 0.5 0.5");
     animal.addEventListener("click",function(){
       this.setAttribute("scale","0 0 0");
     })
