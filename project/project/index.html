@@ -1,32 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Reality Scene</title>
+
+    <link rel="stylesheet" href="style.css" />
+
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.6.0/dist/aframe-extras.min.js"></script>
     <script src="script.js"></script>
-
   </head>
   <body>
-    <a-entity light="type: ambient; intensity:0.2"></a-entity>
-    <a-box id="light source" position="0 4 -4" light="type: point; color: #ffffff"></a-box>
-
     <a-scene>
+      <!-- lighting for overall scene -->
+      <a-entity light="type:ambient; intensity:0.2"></a-entity>
+      <a-entity light="type:directional; castShadow:true; color:#fff" position="1 1 1"></a-entity>
+
       <a-assets>
-        <a-asset-item id="spider" src="spider/scene.gltf" ></a-asset-item>
-       <a-asset-item id="donkey" src="donkey/scene.gltf" ></a-asset-item>
-         <a-asset-item id="Gru" src="Grudespicable/scene.gltf" ></a-asset-item>
-       
+        <a-asset-item id="spider" src="spider/scene.gltf"></a-asset-item>
+        <a-asset-item id="donkey" src="donkey/scene.gltf"></a-asset-item>
+        <a-asset-item id="bacon" src="bacon/scene.gltf"></a-asset-item>
       </a-assets>
 
-      <a-gltf-model  src="#spider" position="0 0 -5" animation-mixer scale="0.2 0.2 0.2"></a-gltf-model>
-      <a-gltf-model  src="#donkey" position="0.5 0 -5" animation-mixer scale="0.3 0.3 0.3"></a-gltf-model>
-      <a-gltf-model  src="#Grudespicable" position="1 0 -5" animation-mixer scale="0.4 0.4 0.4"></a-gltf-model>
-      <a-plane color="green" rotation="-90 0 0" width="50" height="50"></a-plane>
+      <!-- static models -->
+      <a-gltf-model src="#bacon" position="-0.5 0 -5" animation-mixer scale="0.4 0.4 0.4"></a-gltf-model>
+      <a-gltf-model src="#spider" position="0 0 -5" animation-mixer scale="0.2 0.2 0.2"></a-gltf-model>
+      <a-gltf-model src="#donkey" position="0.5 0 -5" animation-mixer scale="0.3 0.3 0.3"></a-gltf-model>
 
-      <a-sky color="	#ff8a35" ></a-sky> 
-      <a-camera position="0 0 0" 
+   
+      <!-- central glowing orb with point light -->
+      <a-entity light="type:point; color: #ffff00; intensity:1.5; distance:5" position="0 1 -2"></a-entity>
+      <a-sphere id="glow-ball" position="0 1 -2" radius="0.5" material="color: yellow; emissive: yellow; emissiveIntensity:0.8"
+                animation="property: position; to: 0 1.6 -2; dir: alternate; dur:2000; loop:true">
+      </a-sphere>
 
-          </a-cursor>
+      <a-plane color="#430000" rotation="-90 0 0" width="50" height="50" shadow="receive:true"></a-plane>
+
+      <a-sky color="#87ceeb"></a-sky>
+      <a-camera position="0 0 0">
+        <a-cursor></a-cursor>
       </a-camera>
     </a-scene>
   </body>
